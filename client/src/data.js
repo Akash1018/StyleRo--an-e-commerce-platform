@@ -10,6 +10,27 @@ export const sliderItems = [
         title:`Winter SALE`,
         desc:`DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS`,
         category: `all_products`
+    },
+    {
+        id:2,
+        img:Banner,
+        title:`345 SALE`,
+        desc:`DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS`,
+        category: `all_products`
+    },
+    {
+        id:3,
+        img:Banner,
+        title:`123 SALE`,
+        desc:`DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS`,
+        category: `all_products`
+    },
+    {
+        id:3,
+        img:Banner,
+        title:`Sweater SALE`,
+        desc:`DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS`,
+        category: `all_products`
     }
 ]
 

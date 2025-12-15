@@ -7,7 +7,7 @@ import Footer from '../components/Footer'
 import Products from '../components/Products'
 import Explore from '../components/Explore'
 import { mobile } from '../responsive'
-import { BrowserRouter, Switch, Route, useLocation} from 'react-router-dom';
+import { BrowserRouter, Switch, Route, useLocation, useParams} from 'react-router-dom';
 import { Calculate } from '@mui/icons-material'
 
 const Container = styled.div`

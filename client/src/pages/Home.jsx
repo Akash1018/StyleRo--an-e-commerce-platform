@@ -7,6 +7,7 @@ import Products from '../components/Products'
 import Slider from '../components/Slider'
 import {setNav} from '../components/NavBar'
 import Announcement from '../components/Announcement'
+
 const Home = () => {
   return (
     <div>

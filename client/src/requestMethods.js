@@ -1,13 +1,14 @@
-import axios from 'axios';
+import axios from "axios";
 
-const BASE_URL = "http://localhost:5000/api/"
-const TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMTFhY2Y0MDVkODk2YWM3OTNjNTE1ZCIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY2MjgwNTIxNywiZXhwIjoxNjYzMDY0NDE3fQ.UfEQPGVmiqfVBtmz-TNKRVzOkklzwAkWAr_OdghRmng"
+const BASE_URL = "/v2";
+const TOKEN =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMTFhY2Y0MDVkODk2YWM3OTNjNTE1ZCIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY2MjgwNTIxNywiZXhwIjoxNjYzMDY0NDE3fQ.UfEQPGVmiqfVBtmz-TNKRVzOkklzwAkWAr_OdghRmng";
 
 export const publicRequest = axios.create({
-    baseURL:BASE_URL,
-}) 
+  baseURL: BASE_URL,
+});
 
 export const userRequest = axios.create({
-    baseURL:BASE_URL,
-    header: {token:`Bearer ${TOKEN}`},
-})
+  baseURL: BASE_URL,
+  header: { token: `Bearer ${TOKEN}` },
+});
