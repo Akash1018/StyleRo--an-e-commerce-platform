@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
 import Badge from "@mui/material/Badge";
 import { mobile } from "../responsive";
 import { useSelector } from "react-redux";
@@ -8,6 +9,7 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { Link, Navigate } from "react-router-dom";
 import { useState } from "react";
 import "./icon.css";
+import { display, height, padding } from "@mui/system";
 
 const Container = styled.div`
   height: 100%;
@@ -36,8 +38,8 @@ const Nav = styled.div`
   position: fixed;
   top: 0px;
   left: 0px;
-  width: 200px;
-  height: 100%;
+  width: 20vw;
+  height: 100vh;
   overflow: disable;
   background-color: white;
   color: black;
@@ -56,9 +58,6 @@ const Butt2 = styled.button`
   border: none;
   color: black;
   background: none;
-  position: fixed;
-  top: 18px;
-  left: 15px;
   transition: 0.3s;
 `;
 
@@ -99,13 +98,19 @@ const NavBar = () => {
   const listStyle = {
     display: "flex",
     flexDirection: "column",
-    height: "100%",
-    position: "fixed",
-    top: "20%",
-    listStyleType: "none",
-    fontSize: "50px",
-    gap: "20px",
-    textAlign: "left",
+    paddingLeft: "10px",
+    height: "100vh",
+    overflowY: "scroll",
+  };
+
+  const imgStyle = {
+    height: "100px",
+    width: "40%",
+    objectFit: "cover",
+  };
+  const liStyle = {
+    listStyle: "none",
+    padding: "12px 0 8px 0",
   };
   showNav
     ? (document.body.style.overflow = "hidden")
@@ -119,23 +124,49 @@ const NavBar = () => {
             <MenuIcon style={{ color: "black" }} />
             {showNav === true && (
               <Nav>
-                <Butt2 onClick={() => setShowNav(!showNav)}>
-                  <MenuIcon />
-                </Butt2>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    padding: "8px",
+                  }}
+                >
+                  <Butt2 onClick={() => setShowNav(!showNav)}>
+                    <CloseIcon />
+                  </Butt2>
+                  <p
+                    style={{
+                      fontSize: "20px",
+                      margin: "auto",
+                      fontWeight: "bold",
+                      textTransform: "uppercase",
+                    }}
+                  >
+                    Categories
+                  </p>
+                </div>
                 <ul style={listStyle}>
-                  <Link
-                    to="/"
-                    style={{ color: "color", textDecoration: "none" }}
-                  >
-                    <li>shop</li>
-                  </Link>
-                  <Link
-                    to="/product"
-                    style={{ color: "black", textDecoration: "none" }}
-                  >
-                    <li>Collections</li>
-                  </Link>
-                  <li>About</li>
+                  {Array(20)
+                    .fill(0)
+                    .map((_, index) => (
+                      <li key={index} style={liStyle}>
+                        <div
+                          style={{
+                            display: "flex",
+                            gap: "5px",
+                            alignItems: "center",
+                          }}
+                        >
+                          <img
+                            style={imgStyle}
+                            src="https://image.hm.com/assets/hm/77/5a/775afd7e121de98e26c7bc2890cf4109efa36213.jpg?imwidth=1260"
+                          />
+                          <p style={{ fontSize: "20px", margin: 0 }}>
+                            categories
+                          </p>
+                        </div>
+                      </li>
+                    ))}
                 </ul>
               </Nav>
             )}
