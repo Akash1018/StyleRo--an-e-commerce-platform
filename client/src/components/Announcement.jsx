@@ -1,28 +1,28 @@
-import React from 'react'
-import styled from 'styled-components'
-import {mobile} from '../responsive'
+import styled from "styled-components";
+import { mobile } from "../responsive";
 
 const Container = styled.div`
-    height: 40px;
-    background-color: teal;
-    color: white;
-    display:flex;
-    align-items:center;
-    justify-content: center;
-    font-size: 14px;
-    font-weight: 500;
-    width: 100%;
-    ${mobile({
-      height:'34px'
-    })};
-`
+  background-color: #1d1d1d;
+  color: white;
+  ${mobile({
+    height: "34px",
+  })};
+`;
 
 const Announcement = () => {
   return (
     <Container>
+      <p
+        style={{
+          textAlign: "center",
+          fontSize: "14px",
+          padding: "6px",
+        }}
+      >
         Super Deal! Free Shipping on First Order.
+      </p>
     </Container>
-  )
-}
+  );
+};
 
-export default Announcement
+export default Announcement;

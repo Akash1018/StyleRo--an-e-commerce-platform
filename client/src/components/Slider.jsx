@@ -84,13 +84,6 @@ const Slider = () => {
     })
   }
 
-  const prev = () => {
-    setIndex((prev) => {
-        if(prev === 0) return sliderItems.length-1;
-        return prev-1;
-    })
-  }
-
   useEffect(() => {
     const timer = setInterval(() => {
         next();
@@ -103,7 +96,7 @@ const Slider = () => {
     <Container>
       <Wrapper style={{
             transform: `translateX(-${index * SLIDE_WIDTH}px)`,
-            transition: "transform 0.4s linear",
+            transition: "transform 2s linear",
           }}>
         {sliderItems.map((item) => (
           <Slide>
@@ -120,11 +113,6 @@ const Slider = () => {
           </Slide>
         ))}
       </Wrapper>
-
-        <div style={{display: "flex", zIndex: 100}}>
-            <button onClick={prev}>Prev</button>
-            <button onClick={next}>next</button>
-        </div>
     </Container>
   );
 };

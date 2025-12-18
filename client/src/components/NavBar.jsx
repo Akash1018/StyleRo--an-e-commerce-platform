@@ -10,6 +10,7 @@ import { Link, Navigate } from "react-router-dom";
 import { useState } from "react";
 import "./icon.css";
 import { display, height, padding } from "@mui/system";
+import SearchBar from "./SearchBar";
 
 const Container = styled.div`
   height: 100%;
@@ -35,16 +36,19 @@ const Left = styled.div`
 `;
 
 const Nav = styled.div`
-  position: fixed;
-  top: 0px;
-  left: 0px;
+ position: fixed;
+  top: 0;
+  left: 0;
   width: 20vw;
   height: 100vh;
-  overflow: disable;
-  background-color: white;
+  background: white;
   color: black;
-  z-index: 1;
-  transition: 0.5s;
+  z-index: 100;
+
+  transform: ${({ isOpen }) =>
+    isOpen ? "translateX(0)" : "translateX(-100%)"};
+
+  transition: transform 0.35s ease-in-out;
 `;
 
 const Butt1 = styled.button`
@@ -122,8 +126,7 @@ const NavBar = () => {
         <Left>
           <Butt1 onClick={() => setShowNav(!showNav)}>
             <MenuIcon style={{ color: "black" }} />
-            {showNav === true && (
-              <Nav>
+              <Nav isOpen={showNav}>
                 <div
                   style={{
                     display: "flex",
@@ -169,13 +172,13 @@ const NavBar = () => {
                     ))}
                 </ul>
               </Nav>
-            )}
           </Butt1>
         </Left>
         <Center>
           <Logo>StyleRo</Logo>
         </Center>
         <Right>
+          <SearchBar />
           <Link
             to="/register"
             style={{ color: "black", textDecoration: "none" }}

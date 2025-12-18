@@ -19,7 +19,7 @@ const Container = styled.div`
 
 const Products = () => {
   const dispatch = useDispatch();
-  const { products, loading, error, total } = useSelector((state) => state.product);
+  const { products, loading, error } = useSelector((state) => state.product);
 
   useEffect(() => {
     dispatch(fetchProducts());
