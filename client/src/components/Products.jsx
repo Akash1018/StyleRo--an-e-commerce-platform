@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import styled from 'styled-components';
 import { popularProducts } from '../data';
 import Product from './Product'
-import axios from 'axios';
 import { mobile } from '../responsive';
 import { fetchProducts } from '../redux/productActions';
 
@@ -20,6 +19,7 @@ const Container = styled.div`
 const Products = () => {
   const dispatch = useDispatch();
   const { products, loading, error } = useSelector((state) => state.product);
+  console.log(123, products);
 
   useEffect(() => {
     dispatch(fetchProducts());
@@ -30,7 +30,7 @@ const Products = () => {
 
   return (
     <Container>
-      { products.slice(0, 8).map((item) => <Product item={item} key={item.id} />)}
+      { products.map((item) => <Product item={item} key={item.id} />)}
     </Container>
   );
 };

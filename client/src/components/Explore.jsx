@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import axios from 'axios';
 import { mobile } from '../responsive';
 import ExploreItem from './ExploreItem';
 import { useDispatch, useSelector } from 'react-redux';
