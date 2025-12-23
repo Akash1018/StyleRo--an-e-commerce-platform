@@ -3,9 +3,9 @@ import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import PersonIcon from "@mui/icons-material/Person";
 import Badge from "@mui/material/Badge";
-import { mobile,tablet } from "../responsive";
+import { mobile, tablet } from "../responsive";
 import { useSelector } from "react-redux";
-import LocalMallIcon from '@mui/icons-material/LocalMall';
+import LocalMallIcon from "@mui/icons-material/LocalMall";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import "./icon.css";
@@ -22,7 +22,7 @@ const Wrapper = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 0.5rem;
-  ${mobile({ padding: "10px 0px", })};
+  ${mobile({ padding: "10px 0px" })};
 `;
 
 const Left = styled.div`
@@ -31,7 +31,7 @@ const Left = styled.div`
   align-items: center;
   transition: margin-left 0.5s;
 
-  ${mobile({ display: 'none', })};
+  ${mobile({ display: "none" })};
 `;
 
 const Nav = styled.div`
@@ -49,8 +49,8 @@ const Nav = styled.div`
   transition: transform 0.35s ease-in-out;
 
   ${tablet({
-    overflow: 'hidden',
-    width: '30vw',
+    overflow: "hidden",
+    width: "30vw",
   })}
 `;
 
@@ -78,8 +78,8 @@ const Center = styled.div`
   text-align: center;
 
   ${mobile({
-    textAlign: 'start',
-    padding: '0 10px',
+    textAlign: "start",
+    padding: "0 10px",
   })}
 `;
 const Logo = styled.a`

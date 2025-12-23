@@ -1,92 +1,91 @@
-import Banner1 from './assets/images/slider1.webp'
-import Banner2 from './assets/images/slider2.webp'
-import Banner3 from './assets/images/slider3.webp'
-import Banner4 from './assets/images/slider4.webp'
-import Banner5 from './assets/images/slider5.webp'
-import Banner6 from './assets/images/sweater1.jpg'
-import Banner7 from './assets/images/shoes.jpg'
-import { Category } from '@mui/icons-material';
+import Banner1 from "./assets/images/slider1.webp";
+import Banner2 from "./assets/images/slider2.webp";
+import Banner3 from "./assets/images/slider3.webp";
+import Banner4 from "./assets/images/slider4.webp";
+import Banner5 from "./assets/images/slider5.webp";
+import Banner6 from "./assets/images/sweater1.jpg";
+import Banner7 from "./assets/images/shoes.jpg";
 
 export const sliderItems = [
-    {
-        id:1,
-        img:Banner1,
-        category: `all_products`
-    },
-    {
-        id:2,
-        img:Banner2,
-        category: `all_products`
-    },
-    {
-        id:3,
-        img:Banner3,
-        category: `all_products`
-    },
-    {
-        id:4,
-        img:Banner4,
-        category: `all_products`
-    },
-    {
-        id:5,
-        img:Banner5,
-        category: `all_products`
-    }
-]
+  {
+    id: 1,
+    img: Banner1,
+    category: `bottomwear`,
+  },
+  {
+    id: 2,
+    img: Banner2,
+    category: `shirt`,
+  },
+  {
+    id: 3,
+    img: Banner3,
+    category: `shirt`,
+  },
+  {
+    id: 4,
+    img: Banner4,
+    category: `tshirt`,
+  },
+  {
+    id: 5,
+    img: Banner5,
+    category: `shoes`,
+  },
+];
 
 export const categories = [
-    {
-      id: 1,
-      img: Banner6,
-      title: "SWEATERS",
-      category:"sweater"
-    },
-    {
-      id: 2,
-      img: Banner7,
-      title: "SHOES",
-      category:"shoes"
-    },
-    {
-      id: 3,
-      img: "https://images.pexels.com/photos/5480696/pexels-photo-5480696.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-      title: "JACKETS",
-      category:"jacket"
-    },
-  ];
+  {
+    id: 1,
+    img: Banner6,
+    title: "SWEATERS",
+    category: "sweater",
+  },
+  {
+    id: 2,
+    img: Banner7,
+    title: "SHOES",
+    category: "shoes",
+  },
+  {
+    id: 3,
+    img: "https://images.pexels.com/photos/5480696/pexels-photo-5480696.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+    title: "JACKETS",
+    category: "jacket",
+  },
+];
 
-  export const popularProducts = [
-    {
-      id:1,
-      img:"https://d3o2e4jr3mxnm3.cloudfront.net/Mens-Jake-Guitar-Vintage-Crusher-Tee_68382_1_lg.png",
-    },
-    {
-      id:2,
-      img:"https://cdn.shopify.com/s/files/1/0101/4832/products/Angela_Natural_Tee.png?v=1606780388",
-    },
-    {
-      id:3,
-      img:"https://www.prada.com/content/dam/pradanux_products/U/UCS/UCS319/1YOTF010O/UCS319_1YOT_F010O_S_182_SLF.png",
-    },
-    {
-      id:4,
-      img:"https://www.burdastyle.com/pub/media/catalog/product/cache/7bd3727382ce0a860b68816435d76e26/107/BUS-PAT-BURTE-1320516/1170x1470_BS_2016_05_132_front.png",
-    },
-    {
-      id:5,
-      img:"https://images.ctfassets.net/5gvckmvm9289/3BlDoZxSSjqAvv1jBJP7TH/65f9a95484117730ace42abf64e89572/Noissue-x-Creatsy-Tote-Bag-Mockup-Bundle-_4_-2.png",
-    },
-    {
-      id:6,
-      img:"https://d3o2e4jr3mxnm3.cloudfront.net/Rocket-Vintage-Chill-Cap_66374_1_lg.png",
-    },
-    {
-      id:7,
-      img:"https://www.vintageindustries.nl/download_front/qympzk1762/2217_Arrow_Jacket_Forest.png",
-    },
-    {
-      id:8,
-      img:"https://www.pngarts.com/files/3/Women-Jacket-PNG-High-Quality-Image.png",
-    },
-  ]
+export const popularProducts = [
+  {
+    id: 1,
+    img: "https://d3o2e4jr3mxnm3.cloudfront.net/Mens-Jake-Guitar-Vintage-Crusher-Tee_68382_1_lg.png",
+  },
+  {
+    id: 2,
+    img: "https://cdn.shopify.com/s/files/1/0101/4832/products/Angela_Natural_Tee.png?v=1606780388",
+  },
+  {
+    id: 3,
+    img: "https://www.prada.com/content/dam/pradanux_products/U/UCS/UCS319/1YOTF010O/UCS319_1YOT_F010O_S_182_SLF.png",
+  },
+  {
+    id: 4,
+    img: "https://www.burdastyle.com/pub/media/catalog/product/cache/7bd3727382ce0a860b68816435d76e26/107/BUS-PAT-BURTE-1320516/1170x1470_BS_2016_05_132_front.png",
+  },
+  {
+    id: 5,
+    img: "https://images.ctfassets.net/5gvckmvm9289/3BlDoZxSSjqAvv1jBJP7TH/65f9a95484117730ace42abf64e89572/Noissue-x-Creatsy-Tote-Bag-Mockup-Bundle-_4_-2.png",
+  },
+  {
+    id: 6,
+    img: "https://d3o2e4jr3mxnm3.cloudfront.net/Rocket-Vintage-Chill-Cap_66374_1_lg.png",
+  },
+  {
+    id: 7,
+    img: "https://www.vintageindustries.nl/download_front/qympzk1762/2217_Arrow_Jacket_Forest.png",
+  },
+  {
+    id: 8,
+    img: "https://www.pngarts.com/files/3/Women-Jacket-PNG-High-Quality-Image.png",
+  },
+];

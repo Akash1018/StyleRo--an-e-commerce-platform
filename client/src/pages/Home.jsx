@@ -1,22 +1,18 @@
-import Categories from '../components/Categories'
-import Footer from '../components/Footer'
-import NavBar from '../components/NavBar'
-import Products from '../components/Products'
-import Slider from '../components/Slider'
-import Announcement from '../components/Announcement'
-import Login from './Login';
-import { useState } from 'react'
+import Categories from "../components/Categories";
+import Footer from "../components/Footer";
+import Products from "../components/Products";
+import Slider from "../components/Slider";
 
 const Home = () => {
   return (
     <div>
       {/* <Announcement /> */}
       <Slider />
-      <Categories/>
+      <Categories />
       <Products />
       <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

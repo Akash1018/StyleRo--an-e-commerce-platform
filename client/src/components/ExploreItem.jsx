@@ -1,8 +1,3 @@
-import {
-  FavoriteBorderOutlined,
-  SearchOutlined,
-  ShoppingCartOutlined,
-} from "@mui/icons-material";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { mobile } from "../responsive";

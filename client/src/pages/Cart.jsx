@@ -1,7 +1,6 @@
 import BagPic from "../assets/images/bag.png";
 import { Add, Remove } from "@mui/icons-material";
 import styled from "styled-components";
-import Navbar from "../components/NavBar";
 import Announcement from "../components/Announcement";
 import Footer from "../components/Footer";
 import { mobile } from "../responsive";

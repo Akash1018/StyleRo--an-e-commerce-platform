@@ -1,4 +1,4 @@
-import useRouteLoader  from "./hooks/useRouterLoader";
+import useRouteLoader from "./hooks/useRouterLoader";
 import Cart from "./pages/Cart";
 import Home from "./pages/Home";
 import Product from "./pages/Product";
@@ -9,7 +9,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Login from "./pages/Login";
 import Loader from "./components/Loader";
-import RouteWatcher from "./components/RouterWatcher";
 import { useLoader } from "./context/LoaderContext";
 
 function App() {
@@ -24,10 +23,8 @@ function App() {
     return () => clearTimeout(timer);
   }, []);
 
-  if(isLoading) {
-    return (
-      <Loader />
-    )
+  if (isLoading) {
+    return <Loader />;
   }
 
   return (
@@ -42,7 +39,7 @@ function App() {
         <Route exact path="/cart" element={<Cart />} />
         <Route exact path="/register" element={<Register />} />
       </Routes>
-    </ Router>
+    </Router>
   );
 }
 

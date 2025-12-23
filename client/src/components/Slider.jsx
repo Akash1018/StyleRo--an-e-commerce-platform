@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
 import styled from "styled-components";
 import { sliderItems } from "../data";
-import { mobile, tablet } from "../responsive";
-import { Link } from "react-router-dom";
+import { mobile } from "../responsive";
 
 const SLIDE_WIDTH = 600;
 const TOTAL_WIDTH = sliderItems.length * SLIDE_WIDTH;
@@ -79,7 +78,7 @@ const Slider = () => {
       >
         {slides.map((item) => (
           <Slide>
-            <ImgContainer>
+            <ImgContainer href={`/products/${item.category}`}>
               <Image src={item.img} />
             </ImgContainer>
           </Slide>

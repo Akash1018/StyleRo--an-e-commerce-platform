@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import Announcement from "../components/Announcement";
 import Footer from "../components/Footer";
-import NavBar from "../components/NavBar";
 import { Add, Remove } from "@mui/icons-material";
 import { mobile } from "../responsive";
 import { useLocation } from "react-router-dom";
@@ -163,7 +162,7 @@ const Product = () => {
               <Remove
                 onClick={() =>
                   setQuantity((prev) => {
-                    if(prev === 1) return prev;
+                    if (prev === 1) return prev;
                     return prev - 1;
                   })
                 }

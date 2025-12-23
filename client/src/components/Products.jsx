@@ -1,20 +1,20 @@
-import { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import styled from 'styled-components';
-import { popularProducts } from '../data';
-import Product from './Product'
-import { mobile } from '../responsive';
-import { fetchProducts } from '../redux/productActions';
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import styled from "styled-components";
+import Product from "./Product";
+import { mobile } from "../responsive";
+import { fetchProducts } from "../redux/productActions";
+import Loader from "./Loader";
 
 const Container = styled.div`
-    padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content:space-between;
-    ${mobile({
-      padding:'5px'
-    })};
-`
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  ${mobile({
+    padding: "5px",
+  })};
+`;
 
 const Products = () => {
   const dispatch = useDispatch();
@@ -23,16 +23,18 @@ const Products = () => {
 
   useEffect(() => {
     dispatch(fetchProducts());
-  }, [dispatch])
+  }, [dispatch]);
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) return <Loader />;
   if (error) return <p>Error: {error}</p>;
 
   return (
     <Container>
-      { products.map((item) => <Product item={item} key={item.id} />)}
+      {products.map((item) => (
+        <Product item={item} key={item.id} />
+      ))}
     </Container>
   );
 };
 
-export default Products
+export default Products;

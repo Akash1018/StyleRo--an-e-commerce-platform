@@ -1,19 +1,8 @@
-import React, { useState } from "react";
 import styled from "styled-components";
-import Navbar from "../components/NavBar";
 import Announcement from "../components/Announcement";
 import Footer from "../components/Footer";
-import Products from "../components/Products";
 import Explore from "../components/Explore";
 import { mobile } from "../responsive";
-import {
-  BrowserRouter,
-  Switch,
-  Route,
-  useLocation,
-  useParams,
-} from "react-router-dom";
-import { Calculate } from "@mui/icons-material";
 
 const FilerContainer = styled.div`
   display: flex;

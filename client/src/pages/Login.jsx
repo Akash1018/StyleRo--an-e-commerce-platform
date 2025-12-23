@@ -12,17 +12,17 @@ const Wrapper = styled.div`
   border-radius: 10px;
   z-index: 4;
 
-  ${mobile({ 
+  ${mobile({
     width: "75%",
     top: "25%",
     left: "2%",
-   })};
+  })};
 
-   ${tablet({
+  ${tablet({
     top: "25%",
     left: "20%",
     width: "50%",
-   })}
+  })}
 `;
 
 const Title = styled.h1`
@@ -60,12 +60,10 @@ const Button = styled.button`
     color: black;
     border: 1px solid black;
   }
-  
-  ${
-    mobile({
-      padding: "10px 10px"
-    })
-  }
+
+  ${mobile({
+    padding: "10px 10px",
+  })}
 `;
 
 const Link = styled.a`
@@ -87,16 +85,15 @@ const darkBG = {
   left: "50%",
   transform: "translate(-50%, -50%)",
   position: "absolute",
-  zIndex: '2',
+  zIndex: "2",
 };
 
 const Login = ({ setIsLoginOpen }) => {
-
   useEffect(() => {
     document.body.style.overflow = "hidden";
 
-    return () => document.body.style.overflow = "auto";
-  }, [])
+    return () => (document.body.style.overflow = "auto");
+  }, []);
   return (
     <>
       <div style={darkBG} onClick={() => setIsLoginOpen(false)} />

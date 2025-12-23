@@ -46,7 +46,6 @@ const Container = styled.div`
 
 const Image = styled.img`
   height: 98%;
-  
 `;
 
 const Icon = styled.div`
