@@ -8,8 +8,7 @@ const Container = styled.div`
         rgba(255, 255, 255, 0.5),
       rgba(255, 255, 255, 0.5)
     ),
-    url("https://images.pexels.com/photos/6984661/pexels-photo-6984661.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")
-      center;
+    url("https://plus.unsplash.com/premium_photo-1664202526559-e21e9c0fb46a?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZmFzaGlvbnxlbnwwfHwwfHx8MA%3D%3D");
     background-size: cover;
     display: flex;
     align-items: center;
@@ -19,12 +18,14 @@ const Wrapper = styled.div`
         width: 40%;
         padding: 20px;
         background: white;
-        ${mobile({width: '75%'})};
+        ${mobile({width: '80%'})};
 `
 
 const Title =styled.div`
         font-size: 24px;
         font-weight: 300;
+
+        ${mobile({textAlign: 'center'})}
 `
 const Form = styled.form`
         display: flex;
@@ -46,9 +47,16 @@ const Button = styled.button`
   width: 40%;
   border: none;
   padding: 15px 20px;
-  background-color: teal;
+  background-color: black;
   color: white;
   cursor: pointer;
+  border-radius: 8px;
+
+  &:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+  }
 `;
 
 const Register = () => {
@@ -57,12 +65,12 @@ const Register = () => {
         <Wrapper>
             <Title>CREATE AN ACCOUNT</Title>
             <Form>
-                <Input placeholder="name" />
-                <Input placeholder="last name" />
-                <Input placeholder="username" />
-                <Input placeholder="email" />
-                <Input placeholder="password" />
-                <Input placeholder="confirm password" />
+                <Input type='text' placeholder="name" />
+                <Input type='text' placeholder="last name" />
+                <Input type='text' placeholder="username" />
+                <Input type='email' placeholder="email" />
+                <Input type='password' placeholder="password" />
+                <Input type='password' placeholder="confirm password" />
                 <Agreement>
                 By creating an account, I consent to the processing of my personal
             data in accordance with the <b>PRIVACY POLICY</b>

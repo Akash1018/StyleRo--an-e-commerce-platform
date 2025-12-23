@@ -5,7 +5,7 @@ import { mobile } from '../responsive'
 import CategoryItem from './CategoryItem'
 
 const Container = styled.div`
-background-color: #FCF5E5;
+    background-color: #FCF5E5;
     display:flex;
     padding: 20px;
     justify-content:space-between;

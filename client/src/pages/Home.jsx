@@ -4,12 +4,13 @@ import NavBar from '../components/NavBar'
 import Products from '../components/Products'
 import Slider from '../components/Slider'
 import Announcement from '../components/Announcement'
+import Login from './Login';
+import { useState } from 'react'
 
 const Home = () => {
   return (
     <div>
-      <NavBar />
-      <Announcement />
+      {/* <Announcement /> */}
       <Slider />
       <Categories/>
       <Products />

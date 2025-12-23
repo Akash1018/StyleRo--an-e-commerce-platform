@@ -1,32 +1,33 @@
 import styled from "styled-components";
-import {mobile} from "../responsive";
-
-const Container = styled.div`
-background-color: #FCF5E5;
-  width: 100vw;
-  height: 100vh;
-  background: linear-gradient(
-      rgba(255, 255, 255, 0.5),
-      rgba(255, 255, 255, 0.5)
-    ),
-    url("https://images.pexels.com/photos/6984650/pexels-photo-6984650.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")
-      center;
-  background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
+import { mobile, tablet } from "../responsive";
+import { useEffect } from "react";
 
 const Wrapper = styled.div`
   width: 25%;
-  padding:20px;
+  padding: 40px;
   background-color: white;
-  ${mobile({width: '75%'})};
+  position: fixed;
+  top: 30%;
+  left: 36%;
+  border-radius: 10px;
+  z-index: 4;
+
+  ${mobile({ 
+    width: "75%",
+    top: "25%",
+    left: "2%",
+   })};
+
+   ${tablet({
+    top: "25%",
+    left: "20%",
+    width: "50%",
+   })}
 `;
 
 const Title = styled.h1`
   font-size: 24px;
-  font-weight: 300;
+  text-align: center;
 `;
 
 const Form = styled.form`
@@ -39,16 +40,32 @@ const Input = styled.input`
   min-width: 40%;
   margin: 10px 0;
   padding: 10px;
+  border-radius: 8px;
+  border: 0.2px solid black;
 `;
 
 const Button = styled.button`
   width: 40%;
   border: none;
   padding: 15px 20px;
-  background-color: teal;
+  background-color: black;
   color: white;
   cursor: pointer;
   margin-bottom: 10px;
+  border-radius: 8px;
+  transition: all 0.5s ease;
+
+  &:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+  }
+  
+  ${
+    mobile({
+      padding: "10px 10px"
+    })
+  }
 `;
 
 const Link = styled.a`
@@ -56,23 +73,55 @@ const Link = styled.a`
   font-size: 12px;
   text-decoration: underline;
   cursor: pointer;
+
+  &:hover {
+    color: grey;
+  }
 `;
 
-const Login = () => {
-  return (
-    <Container>
-        <Wrapper>
-            <Title>SIGN IN</Title>
-            <Form>
-                <Input placeholder="username" />
-                <Input placeholder="password" />
-                <Button>LOGIN</Button>
-                <Link>DO NOT YOU REMEMBER THE PASSWORD?</Link>
-                <Link>CREATE A NEW ACCOUNT</Link>
-            </Form>
-        </Wrapper>
-    </Container>
-  )
-}
+const darkBG = {
+  backgroundColor: "rgba(0, 0, 0, 0.2)",
+  width: "100vw",
+  height: "100vh",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  position: "absolute",
+  zIndex: '2',
+};
 
-export default Login
+const Login = ({ setIsLoginOpen }) => {
+
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+
+    return () => document.body.style.overflow = "auto";
+  }, [])
+  return (
+    <>
+      <div style={darkBG} onClick={() => setIsLoginOpen(false)} />
+      <Wrapper>
+        <Title>SIGN IN</Title>
+        <Form>
+          <Input type="email" placeholder="Email" />
+          <Input type="password" placeholder="Password" />
+          <div style={{ display: "flex", justifyContent: "space-between" }}>
+            <Button>LOGIN</Button>
+            <Button>GUEST LOGIN</Button>
+          </div>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+            }}
+          >
+            <Link>Forgot Password</Link>
+            <Link href="/register">CREATE A NEW ACCOUNT</Link>
+          </div>
+        </Form>
+      </Wrapper>
+    </>
+  );
+};
+
+export default Login;

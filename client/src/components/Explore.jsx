@@ -8,13 +8,14 @@ import { fetchProductsByCategory } from '../redux/productActions';
 import { useParams } from 'react-router-dom';
 
 const Container = styled.div`
-    padding:30px;
+    padding: 10px;
     display: flex;
     flex-wrap: wrap;
-    justify-content:center;
     align-item:center;
+    gap: 16px;
+    overflow: hidden;
     ${mobile({
-      padding:'5px'
+      padding:'8px 20px 0'
     })};
 `
 

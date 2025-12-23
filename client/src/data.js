@@ -1,35 +1,36 @@
-import Banner from './components/images/banner1.png'
-import Banner1 from './components/images/sweater1.jpg'
-import Banner2 from './components/images/shoes.jpg'
+import Banner1 from './assets/images/slider1.webp'
+import Banner2 from './assets/images/slider2.webp'
+import Banner3 from './assets/images/slider3.webp'
+import Banner4 from './assets/images/slider4.webp'
+import Banner5 from './assets/images/slider5.webp'
+import Banner6 from './assets/images/sweater1.jpg'
+import Banner7 from './assets/images/shoes.jpg'
 import { Category } from '@mui/icons-material';
 
 export const sliderItems = [
     {
         id:1,
-        img:Banner,
-        title:`Winter SALE`,
-        desc:`DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS`,
+        img:Banner1,
         category: `all_products`
     },
     {
         id:2,
-        img:Banner,
-        title:`345 SALE`,
-        desc:`DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS`,
+        img:Banner2,
         category: `all_products`
     },
     {
         id:3,
-        img:Banner,
-        title:`123 SALE`,
-        desc:`DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS`,
+        img:Banner3,
         category: `all_products`
     },
     {
-        id:3,
-        img:Banner,
-        title:`Sweater SALE`,
-        desc:`DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS`,
+        id:4,
+        img:Banner4,
+        category: `all_products`
+    },
+    {
+        id:5,
+        img:Banner5,
         category: `all_products`
     }
 ]
@@ -37,13 +38,13 @@ export const sliderItems = [
 export const categories = [
     {
       id: 1,
-      img: Banner1,
+      img: Banner6,
       title: "SWEATERS",
       category:"sweater"
     },
     {
       id: 2,
-      img: Banner2,
+      img: Banner7,
       title: "SHOES",
       category:"shoes"
     },

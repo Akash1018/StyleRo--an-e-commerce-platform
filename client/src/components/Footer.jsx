@@ -5,10 +5,12 @@ import { mobile } from "../responsive";
 const Container = styled.div`
   display: flex;
   align-items: center;
-  background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
-  ${mobile({ flexDirection: "column" })};
+  box-shadow: 0px 2px 2px #888, 0px -1px 3px #888;
   flex-direction: column;
   padding: 16px;
+  margin-top: auto;
+
+  ${mobile({ flexDirection: "column", padding: "8px" })};
 `;
 
 const Logo = styled.h1`
